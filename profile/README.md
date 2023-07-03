@@ -10,7 +10,7 @@ We're not just about conversation; we're about optimization and support. We util
 
 For more information and to join the chat, visit [neuralchat.tech](https://neuralchat.tech/).
 
-![flow](assets/flow.png)
+![flow](https://github.com/NeuralChat/.github/blob/main/assets/flow.png)
 
 ## 🏗️ System Construction
 
@@ -20,7 +20,7 @@ Our system was built in an optimized manner, implementing three separate service
 2. 🗃️ **PostgreSQL Database**: The Django server constantly interacts with this database.
 3. 🤖 **AI System**: This is disconnected from the Django server. It collects data from the database, processes it constantly, and feeds back into the database with statistics and data.
 
-![sequence](assets/sequence.png)
+![sequence](https://github.com/NeuralChat/.github/blob/main/assets/sequence.png)
 
 ## 👥 Developers
 
