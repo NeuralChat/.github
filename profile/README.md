@@ -8,7 +8,7 @@ However, we stand out from every other chat you've ever known. Our platform leve
 
 We're not just about conversation; we're about optimization and support. We utilize AI technology to automate tasks and provide assistance to our users, thereby improving the efficiency and quality of our service.
 
-For more information and to join the chat, visit [neuralchat.tech](https://neuralchat.tech/).
+For more information and to join the chat, visit [neuralchat.tech](https://www.neuralchat.tech/).
 
 ![flow](https://github.com/NeuralChat/.github/blob/main/assets/flow.png)
 
