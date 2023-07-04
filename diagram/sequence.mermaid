@@ -1,6 +1,17 @@
 sequenceDiagram
-    User->>Server: Communication
-    Server->>Database: Query to DB
-    Database-->>Server: Information
-    Server-->>User: Dialogues and Information
-    AI System->Database: Continuous Data Processing
+    Mobile App->>Server: Send Message
+    Server->>Database: Store Message
+    Database-->>Server: Confirmation - Message Stored
+    Server-->>Mobile App: Message Sent
+    Note over Server, AI System: Server Signals AI System for Data Processing
+    loop Data Processing
+        AI System->>Database: Fetch Usage Data for Processing
+        Database-->>AI System: Provide Usage Data
+        Note over AI System: Data Processing<br>Occurs Internally
+        AI System->>Database: Store Processed Data
+        Database-->>AI System: Confirmation - Data Stored
+    end
+    Mobile App->>Server: Fetch Messages or Processed Content
+    Server->>Database: Fetch Messages & Processed Data
+    Database-->>Server: Return Messages & Processed Data
+    Server-->>Mobile App: Return History, Messages, and Analytics
