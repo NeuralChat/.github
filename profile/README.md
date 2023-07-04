@@ -22,6 +22,8 @@ Our system was built in an optimized manner, implementing three separate service
 
 ![sequence](https://github.com/NeuralChat/.github/blob/main/assets/sequence.png)
 
+![entity relationship](https://github.com/NeuralChat/.github/blob/main/assets/entityRelationship.png)
+
 ## 👥 Developers
 
 This project was made possible by the hard work and dedication of the following developer(s):
