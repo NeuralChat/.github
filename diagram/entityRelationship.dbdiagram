@@ -1,0 +1,71 @@
+Table User {
+  id int [pk, increment]
+  join_date datetime
+  photo image
+  phone varchar(200) unique
+  full_name varchar(200)
+  status varchar(200)
+}
+
+Table Session {
+  id int [pk, increment]
+  session_key varchar
+  session_data text
+  expire_date datetime
+}
+
+Table UserSession {
+  id int [pk, increment]
+  user int [ref: > User.id]
+  session int [ref: > Session.id]
+}
+
+Table UserContact {
+  id int [pk, increment]
+  user int [ref: > User.id]
+  contact int [ref: > User.id]
+}
+
+Table UserBlock {
+  id int [pk, increment]
+  user int [ref: > User.id]
+  contact int [ref: > User.id]
+}
+
+Table VerificationCode {
+  id int [pk, increment]
+  user int [ref: > User.id]
+  code varchar(6)
+  expiration_date timestamp
+  is_verified bool
+}
+
+Table Message {
+  id int [pk, increment]
+  content text
+  sent_at datetime
+  sender int [ref: > User.id]
+  receiver int [ref: > User.id]
+}
+
+Table Group {
+  id int [pk, increment]
+  created_at datetime
+  photo image
+  name varchar
+  created_by int [ref: > User.id]
+}
+
+Table GroupMember {
+  id int [pk, increment]
+  group int [ref: > Group.id]
+  member int [ref: > User.id]
+}
+
+Table GroupMessage {
+  id int [pk, increment]
+  content text
+  sent_at datetime
+  group int [ref: > Group.id]
+  sender int [ref: > User.id]
+}
