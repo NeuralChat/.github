@@ -42,7 +42,7 @@ Table VerificationCode {
 
 Table Message {
   id int [pk, increment]
-  content text
+  content int [ref: > ContentMessage.id]
   sent_at datetime
   sender int [ref: > User.id]
   receiver int [ref: > User.id]
@@ -64,8 +64,14 @@ Table GroupMember {
 
 Table GroupMessage {
   id int [pk, increment]
-  content text
+  content int [ref: > ContentMessage.id]
   sent_at datetime
   group int [ref: > Group.id]
   sender int [ref: > User.id]
+}
+
+Table ContentMessage {
+  id int [pk, increment]
+  textContent text
+  fileContent file
 }
