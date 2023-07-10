@@ -34,8 +34,8 @@ Table UserBlock {
 
 Table VerificationCode {
   id int [pk, increment]
-  user int [ref: > User.id]
-  code varchar(6)
+  user varchar
+  code varchar
   expiration_date timestamp
   is_verified bool
 }
