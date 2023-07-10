@@ -12,11 +12,15 @@ sequenceDiagram
     Note over Server, AI System: Server Signals AI System for Data Processing
 
     loop Data Processing
-        AI System->>Database: Fetch Data for Processing
-        Database-->>AI System: Provide Data
+        AI System->>Server: API Request
+        Server->>Database: Fetch Data
+        Database-->>Server: Provide Data
+        Server-->>AI System: Data
         Note over AI System: Data Processing<br>Occurs Internally
-        AI System->>Database: Store Processed Data
-        Database-->>AI System: Confirmation - Data Stored
+        AI System->>Server: API Send Processed Data
+        Server->>Database: Store Data
+        Database-->>Server: Confirmation - Data Stored
+        Server-->>AI System: Confirmation
         Note over AI System: AI System performs<br>Data processing operations<br>on the fetched data,<br>such as analyzing, filtering,<br>and generating insights.
     end
 
