@@ -7,6 +7,18 @@ Table User {
   status varchar(200)
 }
 
+Table Contact {
+  user_id int [ref: > User.id]
+  contact_id int [ref: > User.id]
+  Primary Key(user_id, contact_id)
+}
+
+Table BlockedUser {
+  user_id int [ref: > User.id]
+  blocked_id int [ref: > User.id]
+  Primary Key(user_id, blocked_id)
+}
+
 Table Session {
   id int [pk, increment]
   session_key varchar
@@ -18,18 +30,6 @@ Table UserSession {
   id int [pk, increment]
   user int [ref: > User.id]
   session int [ref: > Session.id]
-}
-
-Table UserContact {
-  id int [pk, increment]
-  user int [ref: > User.id]
-  contact int [ref: > User.id]
-}
-
-Table UserBlock {
-  id int [pk, increment]
-  user int [ref: > User.id]
-  contact int [ref: > User.id]
 }
 
 Table VerificationCode {
@@ -57,9 +57,9 @@ Table Group {
 }
 
 Table GroupMember {
-  id int [pk, increment]
-  group int [ref: > Group.id]
-  member int [ref: > User.id]
+  user_id int [ref: > User.id]
+  group_id int [ref: > Group.id]
+  Primary Key(user_id, group_id)
 }
 
 Table GroupMessage {
