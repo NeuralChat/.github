@@ -30,7 +30,6 @@ This project was made possible by the hard work and dedication of the following 
 
 - [WhitePoodleMoth](https://github.com/WhitePoodleMoth)
 - [Pedro Andrade](https://github.com/pedroandrade03)
-- [Henry](https://github.com/HenryFacens)
 
 ## 📄 License
 
