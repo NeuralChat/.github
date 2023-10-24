@@ -29,7 +29,6 @@ Our system was built in an optimized manner, implementing three separate service
 This project was made possible by the hard work and dedication of the following developer(s):
 
 - [WhitePoodleMoth](https://github.com/WhitePoodleMoth)
-- [Pedro Andrade](https://github.com/pedroandrade03)
 
 ## 📄 License
 
